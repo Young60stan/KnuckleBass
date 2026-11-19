@@ -1,5 +1,6 @@
 # Builds KnuckleBass as a macOS AU + VST3 on GitHub's Mac machines.
 # Run it from the repo's Actions tab ("Run workflow"), or by pushing to main.
+# Steps follow HISE's own macOS CI script (tools/auto_build/build_ci.sh).
 
 name: Build macOS plugin (HISE)
 
@@ -16,7 +17,7 @@ env:
 jobs:
   build-mac:
     runs-on: macos-15
-    timeout-minutes: 240
+    timeout-minutes: 300
     steps:
       - name: Check out KnuckleBass
         uses: actions/checkout@v4
@@ -30,34 +31,39 @@ jobs:
           ref: ${{ env.HISE_BRANCH }}
           path: HISE
 
+      - name: Check out JUCE (HISE submodule, includes Projucer)
+        working-directory: HISE
+        run: git submodule update --init --depth 1 JUCE
+
       - name: Restore cached HISE build
         id: hise-cache
         uses: actions/cache@v4
         with:
-          path: HISE/projects/standalone/Builds/MacOSX/build/Release/HISE.app
-          key: hise-mac-${{ env.HISE_BRANCH }}-${{ hashFiles('HISE/hi_*/**/*.cpp', 'HISE/hi_*/**/*.h') }}
+          path: HISE/projects/standalone/Builds/MacOSX/build/CI/HISE.app
+          key: hise-mac-ci-${{ env.HISE_BRANCH }}-${{ hashFiles('HISE/hi_*/**/*.cpp', 'HISE/hi_*/**/*.h') }}
 
       - name: Unpack HISE SDKs
         working-directory: HISE/tools/SDK
-        run: unzip -o -q sdk.zip
+        run: tar -xf sdk.zip
 
       - name: Build HISE (skipped if cached)
         if: steps.hise-cache.outputs.cache-hit != 'true'
         working-directory: HISE
         run: |
-          PROJUCER="tools/projucer/Projucer.app/Contents/MacOS/Projucer"
-          chmod +x "$PROJUCER"
+          PROJUCER="JUCE/projucer/Projucer.app/Contents/MacOS/Projucer"
+          chmod +x "$PROJUCER" tools/projucer/xcbeautify
           "$PROJUCER" --resave "projects/standalone/HISE Standalone.jucer"
+          set -o pipefail
           xcodebuild -project "projects/standalone/Builds/MacOSX/HISE Standalone.xcodeproj" \
-            -configuration Release -quiet
+            -configuration CI | ./tools/projucer/xcbeautify --renderer github-actions
 
       - name: Export and compile the plugin
         run: |
-          HISE_APP="$GITHUB_WORKSPACE/HISE/projects/standalone/Builds/MacOSX/build/Release/HISE.app/Contents/MacOS/HISE"
+          HISE_APP="$GITHUB_WORKSPACE/HISE/projects/standalone/Builds/MacOSX/build/CI/HISE.app/Contents/MacOS/HISE"
           cd "$GITHUB_WORKSPACE/project"
           "$HISE_APP" set_project_folder -p:"$GITHUB_WORKSPACE/project"
           "$HISE_APP" set_hise_folder    -p:"$GITHUB_WORKSPACE/HISE"
-          "$HISE_APP" export_ci "XmlPresetBackups/$PROJECT_NAME.xml" -t:$PLUGIN_TYPE -p:VST_AU -a:x64
+          "$HISE_APP" export_ci "XmlPresetBackups/$PROJECT_NAME.xml" -t:$PLUGIN_TYPE -p:VST_AU -a:x64 -nolto
           chmod +x Binaries/batchCompileOSX
           sh Binaries/batchCompileOSX
 
