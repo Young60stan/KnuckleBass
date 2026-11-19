@@ -1,0 +1,76 @@
+# Builds KnuckleBass as a macOS AU + VST3 on GitHub's Mac machines.
+# Run it from the repo's Actions tab ("Run workflow"), or by pushing to main.
+
+name: Build macOS plugin (HISE)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+env:
+  PROJECT_NAME: KnuckleBass   # XmlPresetBackups/KnuckleBass.xml
+  PLUGIN_TYPE: instrument
+  HISE_BRANCH: develop
+
+jobs:
+  build-mac:
+    runs-on: macos-15
+    timeout-minutes: 240
+    steps:
+      - name: Check out KnuckleBass
+        uses: actions/checkout@v4
+        with:
+          path: project
+
+      - name: Check out HISE
+        uses: actions/checkout@v4
+        with:
+          repository: christophhart/HISE
+          ref: ${{ env.HISE_BRANCH }}
+          path: HISE
+
+      - name: Restore cached HISE build
+        id: hise-cache
+        uses: actions/cache@v4
+        with:
+          path: HISE/projects/standalone/Builds/MacOSX/build/Release/HISE.app
+          key: hise-mac-${{ env.HISE_BRANCH }}-${{ hashFiles('HISE/hi_*/**/*.cpp', 'HISE/hi_*/**/*.h') }}
+
+      - name: Unpack HISE SDKs
+        working-directory: HISE/tools/SDK
+        run: unzip -o -q sdk.zip
+
+      - name: Build HISE (skipped if cached)
+        if: steps.hise-cache.outputs.cache-hit != 'true'
+        working-directory: HISE
+        run: |
+          PROJUCER="tools/projucer/Projucer.app/Contents/MacOS/Projucer"
+          chmod +x "$PROJUCER"
+          "$PROJUCER" --resave "projects/standalone/HISE Standalone.jucer"
+          xcodebuild -project "projects/standalone/Builds/MacOSX/HISE Standalone.xcodeproj" \
+            -configuration Release -quiet
+
+      - name: Export and compile the plugin
+        run: |
+          HISE_APP="$GITHUB_WORKSPACE/HISE/projects/standalone/Builds/MacOSX/build/Release/HISE.app/Contents/MacOS/HISE"
+          cd "$GITHUB_WORKSPACE/project"
+          "$HISE_APP" set_project_folder -p:"$GITHUB_WORKSPACE/project"
+          "$HISE_APP" set_hise_folder    -p:"$GITHUB_WORKSPACE/HISE"
+          "$HISE_APP" export_ci "XmlPresetBackups/$PROJECT_NAME.xml" -t:$PLUGIN_TYPE -p:VST_AU -a:x64
+          chmod +x Binaries/batchCompileOSX
+          sh Binaries/batchCompileOSX
+
+      - name: Collect and ad-hoc sign
+        run: |
+          mkdir -p out
+          find project/Binaries -name "*.component" -path "*Release*" -maxdepth 8 -exec cp -R {} out/ \;
+          find project/Binaries -name "*.vst3"      -path "*Release*" -maxdepth 8 -exec cp -R {} out/ \;
+          for b in out/*; do codesign --force --deep --sign - "$b"; done
+          ls -la out
+
+      - name: Upload plugins
+        uses: actions/upload-artifact@v4
+        with:
+          name: KnuckleBass-macOS
+          path: out/

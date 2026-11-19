@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Processor Type="SynthChain" ID="KnuckleBass" Bypassed="0" Gain="1.0" Balance="0.0"
+           VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0" packageName=""
+           BuildVersion="650">
+  <ChildProcessors>
+    <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+      <ChildProcessors>
+        <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0" Script="{EXTERNAL_SCRIPT}{PROJECT_FOLDER}Interface.js">
+          <ChildProcessors/>
+          <Content>
+            <Control type="ScriptSlider" id="SubLevel" value="0.8999999761581421"/>
+            <Control type="ScriptSlider" id="SubOct" value="0.0"/>
+            <Control type="ScriptSlider" id="SubDrive" value="0.300000011920929"/>
+            <Control type="ScriptSlider" id="Harm2" value="0.25"/>
+            <Control type="ScriptSlider" id="Harm3" value="0.1000000014901161"/>
+            <Control type="ScriptSlider" id="GritLevel" value="0.03999999910593033"/>
+            <Control type="ScriptSlider" id="GritOct" value="0.0"/>
+            <Control type="ScriptComboBox" id="GritWave" value="1.0"/>
+            <Control type="ScriptSlider" id="Volume" value="-4.0"/>
+            <Control type="ScriptSlider" id="VelSens" value="0.2000000029802322"/>
+            <Control type="ScriptButton" id="MonoBtn" value="1.0"/>
+            <Control type="ScriptSlider" id="Attack" value="1.0"/>
+            <Control type="ScriptSlider" id="Decay" value="1800.0"/>
+            <Control type="ScriptSlider" id="Sustain" value="0.0"/>
+            <Control type="ScriptSlider" id="Release" value="2992.0"/>
+            <Control type="ScriptSlider" id="PunchAmt" value="5.0"/>
+            <Control type="ScriptSlider" id="PunchTime" value="60.0"/>
+            <Control type="ScriptSlider" id="DeepLevel" value="0.1000000014901161"/>
+            <Control type="ScriptButton" id="FilterOn" value="1.0"/>
+            <Control type="ScriptSlider" id="Cutoff" value="1500.0"/>
+            <Control type="ScriptSlider" id="Resonance" value="0.800000011920929"/>
+            <Control type="ScriptComboBox" id="FilterMode" value="1.0"/>
+            <Control type="ScriptButton" id="ShapeOn" value="1.0"/>
+            <Control type="ScriptSlider" id="ShapeDrive" value="6.0"/>
+            <Control type="ScriptComboBox" id="ShapeMode" value="2.0"/>
+            <Control type="ScriptButton" id="SatOn" value="1.0"/>
+            <Control type="ScriptSlider" id="SatAmount" value="0.4000000059604645"/>
+            <Control type="ScriptSlider" id="SatMix" value="0.6000000238418579"/>
+            <Control type="ScriptButton" id="CompOn" value="1.0"/>
+            <Control type="ScriptSlider" id="CompThresh" value="-14.0"/>
+            <Control type="ScriptSlider" id="CompRatio" value="4.0"/>
+            <Control type="ScriptSlider" id="CompAttack" value="5.0"/>
+            <Control type="ScriptSlider" id="CompRelease" value="120.0"/>
+            <Control type="ScriptButton" id="LimOn" value="1.0"/>
+            <Control type="ScriptSlider" id="LimCeiling" value="-0.5"/>
+            <Control type="ScriptSlider" id="LimRelease" value="60.0"/>
+            <Control type="ScriptButton" id="ChorusOn" value="0.0"/>
+            <Control type="ScriptSlider" id="ChorusRate" value="0.300000011920929"/>
+            <Control type="ScriptSlider" id="ChorusDepth" value="0.4000000059604645"/>
+            <Control type="ScriptButton" id="DelayOn" value="0.0"/>
+            <Control type="ScriptSlider" id="DelayTime" value="375.0"/>
+            <Control type="ScriptSlider" id="DelayFeedback" value="0.300000011920929"/>
+            <Control type="ScriptSlider" id="DelayMix" value="0.2000000029802322"/>
+            <Control type="ScriptButton" id="ReverbOn" value="0.0"/>
+            <Control type="ScriptSlider" id="ReverbSize" value="0.5"/>
+            <Control type="ScriptSlider" id="ReverbMix" value="0.1500000059604645"/>
+            <Control type="ScriptSlider" id="Width" value="90.0"/>
+            <Control type="ScriptButton" id="ArpOn" value="0.0"/>
+            <Control type="ScriptComboBox" id="ArpRate" value="7.0"/>
+            <Control type="ScriptComboBox" id="ArpMode" value="1.0"/>
+            <Control type="ScriptSlider" id="ArpOct" value="1.0"/>
+            <Control type="ScriptSlider" id="ArpGate" value="0.800000011920929"/>
+            <Control type="ScriptSlider" id="ArpSwing" value="0.0"/>
+            <Control type="ScriptSlider" id="ArpSteps" value="16.0"/>
+            <Control type="ScriptSliderPack" id="ArpVel" value="-1.0" data="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+."/>
+            <Control type="ScriptButton" id="ArpLatch" value="0.0"/>
+            <Control type="ScriptComboBox" id="ArpVelMode" value="1.0"/>
+            <Control type="ScriptSlider" id="ArpTranspose" value="0.0"/>
+            <Control type="ScriptSliderPack" id="ArpPitch" value="-1.0" data="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+."/>
+            <Control type="ScriptSliderPack" id="ArpGateLane" value="-1.0" data="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+."/>
+            <Control type="ScriptButton" id="XYOn" value="1.0"/>
+            <Control type="ScriptComboBox" id="XTarget" value="1.0"/>
+            <Control type="ScriptSlider" id="XDepth" value="0.8999999761581421"/>
+            <Control type="ScriptComboBox" id="YTarget" value="3.0"/>
+            <Control type="ScriptSlider" id="YDepth" value="0.5"/>
+            <Control type="ScriptSlider" id="XPos" value="0.75"/>
+            <Control type="ScriptSlider" id="YPos" value="0.7299270033836365"/>
+          </Content>
+          <UIData>
+            <ContentProperties DeviceType="Desktop">
+              <Component type="ScriptPanel" id="pnlBg" x="0" y="0" width="1000" height="680"
+                         bgColour="0" itemColour="0" itemColour2="0" borderSize="0"/>
+              <Component type="ScriptButton" id="btnTabMain" x="300" y="14" width="86"
+                         height="40" text="MAIN" saveInPreset="0" defaultValue="1"/>
+              <Component type="ScriptButton" id="btnTabFX" x="389" y="14" width="86" height="40"
+                         text="EFFECTS" saveInPreset="0"/>
+              <Component type="ScriptButton" id="btnTabArp" x="567" y="14" width="86"
+                         height="40" text="ARP" saveInPreset="0"/>
+              <Component type="ScriptButton" id="btnTabXY" x="656" y="14" width="86" height="40"
+                         text="XY PAD" saveInPreset="0"/>
+              <Component type="ScriptButton" id="btnPrev" x="770" y="20" width="26" height="28"
+                         text="&lt;" saveInPreset="0" isMomentary="1"/>
+              <Component type="ScriptPanel" id="pnlPresetName" x="798" y="20" width="154"
+                         height="28" bgColour="0" itemColour="0" itemColour2="0" borderSize="0"
+                         allowCallbacks="Clicks &amp; Hover"/>
+              <Component type="ScriptButton" id="btnNext" x="954" y="20" width="26" height="28"
+                         text="&gt;" saveInPreset="0" isMomentary="1"/>
+              <Component type="ScriptPanel" id="pnlMain" x="0" y="72" width="1000" height="568"
+                         bgColour="0" itemColour="0" itemColour2="0" borderSize="0">
+                <Component type="ScriptSlider" id="SubLevel" x="32" y="44" middlePosition="0.0"
+                           parentComponent="pnlMain" width="78" height="98" text="LEVEL"
+                           defaultValue="0.8500000238418579" showValuePopup="Below"/>
+                <Component type="ScriptSlider" id="SubOct" x="121" y="44" middlePosition="-1"
+                           stepSize="1" min="-2" parentComponent="pnlMain" width="78" height="98"
+                           text="OCTAVE"/>
+                <Component type="ScriptSlider" id="SubDrive" x="210" y="44" middlePosition="0.0"
+                           parentComponent="pnlMain" width="78" height="98" text="WARMTH"
+                           defaultValue="0.1500000059604645"/>
+                <Component type="ScriptSlider" id="Harm2" x="32" y="236" middlePosition="0.0"
+                           parentComponent="pnlMain" width="78" height="98" text="2ND" defaultValue="0.300000011920929"/>
+                <Component type="ScriptSlider" id="Harm3" x="112" y="236" middlePosition="0.0"
+                           parentComponent="pnlMain" width="78" height="98" text="3RD" defaultValue="0.119999997317791"/>
+                <Component type="ScriptSlider" id="GritLevel" x="32" y="424" middlePosition="0.0"
+                           parentComponent="pnlMain" width="78" height="98" text="LEVEL"
+                           defaultValue="0.07999999821186066"/>
+                <Component type="ScriptSlider" id="GritOct" x="112" y="424" middlePosition="0.0"
+                           stepSize="1" min="-1" max="2" parentComponent="pnlMain" width="78"
+                           height="98" text="OCTAVE"/>
+                <Component type="ScriptLabel" id="capGritWave" x="200" y="422" parentComponent="pnlMain"
+                           width="106" height="18" text="WAVE" fontName="Oxygen Bold" fontSize="11"
+                           textColour="4286555563" alignment="left" editable="0"/>
+                <Component type="ScriptComboBox" id="GritWave" x="200" y="442" max="3" parentComponent="pnlMain"
+                           width="106" height="28" items="Saw&#10;Square&#10;Triangle"/>
+                <Component type="ScriptPanel" id="pnlWoofer" x="340" y="0" parentComponent="pnlMain"
+                           width="320" height="410" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+                <Component type="ScriptSlider" id="Volume" x="694" y="362" middlePosition="-1"
+                           stepSize="0.1" min="-24" max="6" parentComponent="pnlMain" width="80"
+                           height="98" text="VOLUME" defaultValue="-3.0"/>
+                <Component type="ScriptSlider" id="VelSens" x="780" y="362" middlePosition="0.0"
+                           parentComponent="pnlMain" width="80" height="98" text="VELOCITY"
+                           defaultValue="0.300000011920929"/>
+                <Component type="ScriptButton" id="MonoBtn" x="696" y="478" parentComponent="pnlMain"
+                           width="164" height="30" text="MONO" defaultValue="1"/>
+                <Component type="ScriptPanel" id="pnlEnv" x="694" y="48" parentComponent="pnlMain"
+                           width="272" height="140" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+                <Component type="ScriptSlider" id="Attack" x="690" y="200" middlePosition="100"
+                           stepSize="1" min="1" max="2000" parentComponent="pnlMain" width="70"
+                           height="98" text="ATTACK" defaultValue="3.0"/>
+                <Component type="ScriptSlider" id="Decay" x="762" y="200" middlePosition="400"
+                           stepSize="1" min="5" max="5000" parentComponent="pnlMain" width="70"
+                           height="98" text="DECAY" defaultValue="450.0"/>
+                <Component type="ScriptSlider" id="Sustain" x="834" y="200" middlePosition="0.0"
+                           stepSize="1" max="100" parentComponent="pnlMain" width="70" height="98"
+                           text="SUSTAIN" defaultValue="85.0"/>
+                <Component type="ScriptSlider" id="Release" x="906" y="200" middlePosition="400"
+                           stepSize="1" min="5" max="5000" parentComponent="pnlMain" width="70"
+                           height="98" text="RELEASE" defaultValue="180.0"/>
+                <Component type="ScriptPanel" id="vizSubWave" x="34" y="146" parentComponent="pnlMain"
+                           width="272" height="36" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+                <Component type="ScriptPanel" id="vizHarm" x="198" y="236" parentComponent="pnlMain"
+                           width="108" height="130" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+                <Component type="ScriptPanel" id="vizGritWave" x="200" y="478" parentComponent="pnlMain"
+                           width="106" height="70" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+                <Component type="ScriptSlider" id="PunchAmt" x="352" y="456" middlePosition="3"
+                           stepSize="0.1" max="12" parentComponent="pnlMain" width="76"
+                           height="98" text="PUNCH"/>
+                <Component type="ScriptSlider" id="PunchTime" x="430" y="456" middlePosition="80"
+                           stepSize="1" min="10" max="500" parentComponent="pnlMain" width="76"
+                           height="98" text="P.DECAY" defaultValue="60.0"/>
+                <Component type="ScriptSlider" id="DeepLevel" x="508" y="456" middlePosition="0.0"
+                           parentComponent="pnlMain" width="76" height="98" text="DEEP"/>
+                <Component type="ScriptPanel" id="vizLow" x="592" y="458" parentComponent="pnlMain"
+                           width="56" height="92" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+                <Component type="ScriptPanel" id="vizVoice" x="696" y="516" parentComponent="pnlMain"
+                           width="164" height="32" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+                <Component type="ScriptPanel" id="vizMeter" x="872" y="362" parentComponent="pnlMain"
+                           width="94" height="186" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+              </Component>
+              <Component type="ScriptPanel" id="pnlFX" x="0" y="72" width="1000" height="568"
+                         bgColour="0" itemColour="0" itemColour2="0" borderSize="0" visible="0">
+                <Component type="ScriptButton" id="FilterOn" x="242" y="17" parentComponent="pnlFX"
+                           width="64" height="22" text="ON" defaultValue="1"/>
+                <Component type="ScriptSlider" id="Cutoff" x="30" y="48" middlePosition="1000"
+                           stepSize="1" min="20" max="20000" parentComponent="pnlFX" width="78"
+                           height="98" text="CUTOFF" defaultValue="2500.0"/>
+                <Component type="ScriptSlider" id="Resonance" x="108" y="48" middlePosition="0.0"
+                           min="0.3" max="9.9" parentComponent="pnlFX" width="78" height="98"
+                           text="RESO" defaultValue="1.0"/>
+                <Component type="ScriptLabel" id="capFilterMode" x="194" y="122" parentComponent="pnlFX"
+                           width="120" height="18" text="MODE" fontName="Oxygen Bold" fontSize="11"
+                           textColour="4286555563" alignment="left" editable="0"/>
+                <Component type="ScriptComboBox" id="FilterMode" x="194" y="140" max="6"
+                           parentComponent="pnlFX" width="120" height="28" items="Moog LP&#10;Ladder LP&#10;SVF LP&#10;Reso LP&#10;SVF HP&#10;SVF BP"/>
+                <Component type="ScriptButton" id="ShapeOn" x="569" y="17" parentComponent="pnlFX"
+                           width="64" height="22" text="ON" defaultValue="1"/>
+                <Component type="ScriptSlider" id="ShapeDrive" x="357" y="48" middlePosition="0.0"
+                           stepSize="0.1" max="24" parentComponent="pnlFX" width="78" height="98"
+                           text="DRIVE" defaultValue="3.0"/>
+                <Component type="ScriptLabel" id="capShapeMode" x="443" y="44" parentComponent="pnlFX"
+                           width="198" height="18" text="SHAPE" fontName="Oxygen Bold" fontSize="11"
+                           textColour="4286555563" alignment="left" editable="0"/>
+                <Component type="ScriptComboBox" id="ShapeMode" x="443" y="62" max="6" parentComponent="pnlFX"
+                           width="198" height="28" items="Atan&#10;Tanh&#10;Square&#10;Square Root&#10;Saturate&#10;Sine"
+                           defaultValue="2"/>
+                <Component type="ScriptButton" id="SatOn" x="896" y="17" parentComponent="pnlFX"
+                           width="64" height="22" text="ON" defaultValue="1"/>
+                <Component type="ScriptSlider" id="SatAmount" x="684" y="48" middlePosition="0.0"
+                           max="0.95" parentComponent="pnlFX" width="78" height="98" text="AMOUNT"
+                           defaultValue="0.300000011920929"/>
+                <Component type="ScriptSlider" id="SatMix" x="762" y="48" middlePosition="0.0"
+                           parentComponent="pnlFX" width="78" height="98" text="MIX" defaultValue="0.5"/>
+                <Component type="ScriptButton" id="CompOn" x="242" y="203" parentComponent="pnlFX"
+                           width="64" height="22" text="ON" defaultValue="1"/>
+                <Component type="ScriptSlider" id="CompThresh" x="28" y="232" middlePosition="-1"
+                           stepSize="0.1" min="-40" max="0" parentComponent="pnlFX" width="70"
+                           height="98" text="THRESH" defaultValue="-12.0"/>
+                <Component type="ScriptSlider" id="CompRatio" x="98" y="232" middlePosition="4"
+                           stepSize="0.1" min="1" max="20" parentComponent="pnlFX" width="70"
+                           height="98" text="RATIO" defaultValue="4.0"/>
+                <Component type="ScriptSlider" id="CompAttack" x="168" y="232" middlePosition="10"
+                           stepSize="0.1" min="0.1" max="100" parentComponent="pnlFX" width="70"
+                           height="98" text="ATTACK" defaultValue="10.0"/>
+                <Component type="ScriptSlider" id="CompRelease" x="238" y="232" middlePosition="150"
+                           stepSize="1" min="10" max="1000" parentComponent="pnlFX" width="70"
+                           height="98" text="RELEASE" defaultValue="120.0"/>
+                <Component type="ScriptButton" id="LimOn" x="569" y="203" parentComponent="pnlFX"
+                           width="64" height="22" text="ON" defaultValue="1"/>
+                <Component type="ScriptSlider" id="LimCeiling" x="357" y="234" middlePosition="-1"
+                           stepSize="0.1" min="-24" max="0" parentComponent="pnlFX" width="78"
+                           height="98" text="CEILING" defaultValue="-1.0"/>
+                <Component type="ScriptSlider" id="LimRelease" x="435" y="234" middlePosition="80"
+                           stepSize="1" min="10" max="500" parentComponent="pnlFX" width="78"
+                           height="98" text="RELEASE" defaultValue="60.0"/>
+                <Component type="ScriptButton" id="ChorusOn" x="896" y="203" parentComponent="pnlFX"
+                           width="64" height="22" text="ON"/>
+                <Component type="ScriptSlider" id="ChorusRate" x="684" y="234" middlePosition="0.0"
+                           parentComponent="pnlFX" width="78" height="98" text="RATE" defaultValue="0.300000011920929"/>
+                <Component type="ScriptSlider" id="ChorusDepth" x="762" y="234" middlePosition="0.0"
+                           parentComponent="pnlFX" width="78" height="98" text="DEPTH" defaultValue="0.4000000059604645"/>
+                <Component type="ScriptButton" id="DelayOn" x="242" y="389" parentComponent="pnlFX"
+                           width="64" height="22" text="ON"/>
+                <Component type="ScriptSlider" id="DelayTime" x="30" y="418" middlePosition="250"
+                           stepSize="1" min="10" max="1000" parentComponent="pnlFX" width="78"
+                           height="98" text="TIME" defaultValue="375.0"/>
+                <Component type="ScriptSlider" id="DelayFeedback" x="120" y="418" middlePosition="0.0"
+                           max="0.95" parentComponent="pnlFX" width="78" height="98" text="FEEDBACK"
+                           defaultValue="0.300000011920929"/>
+                <Component type="ScriptSlider" id="DelayMix" x="210" y="418" middlePosition="0.0"
+                           parentComponent="pnlFX" width="78" height="98" text="MIX" defaultValue="0.2000000029802322"/>
+                <Component type="ScriptButton" id="ReverbOn" x="569" y="389" parentComponent="pnlFX"
+                           width="64" height="22" text="ON"/>
+                <Component type="ScriptSlider" id="ReverbSize" x="357" y="420" middlePosition="0.0"
+                           parentComponent="pnlFX" width="78" height="98" text="SIZE" defaultValue="0.5"/>
+                <Component type="ScriptSlider" id="ReverbMix" x="435" y="420" middlePosition="0.0"
+                           parentComponent="pnlFX" width="78" height="98" text="MIX" defaultValue="0.1500000059604645"/>
+                <Component type="ScriptSlider" id="Width" x="684" y="420" middlePosition="0.0"
+                           stepSize="1" max="200" parentComponent="pnlFX" width="78" height="98"
+                           text="WIDTH" defaultValue="100.0"/>
+                <Component type="ScriptPanel" id="vizFilter" x="194" y="48" parentComponent="pnlFX"
+                           width="120" height="68" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+                <Component type="ScriptPanel" id="vizShape" x="443" y="98" parentComponent="pnlFX"
+                           width="198" height="76" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+                <Component type="ScriptPanel" id="vizSat" x="848" y="48" parentComponent="pnlFX"
+                           width="120" height="128" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+                <Component type="ScriptPanel" id="vizComp" x="32" y="336" parentComponent="pnlFX"
+                           width="282" height="28" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+                <Component type="ScriptPanel" id="vizLim" x="521" y="234" parentComponent="pnlFX"
+                           width="120" height="128" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+                <Component type="ScriptPanel" id="vizChorus" x="848" y="234" parentComponent="pnlFX"
+                           width="120" height="128" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+                <Component type="ScriptPanel" id="vizDelay" x="32" y="520" parentComponent="pnlFX"
+                           width="282" height="30" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+                <Component type="ScriptPanel" id="vizReverb" x="521" y="420" parentComponent="pnlFX"
+                           width="120" height="128" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+                <Component type="ScriptPanel" id="vizStereo" x="770" y="420" parentComponent="pnlFX"
+                           width="198" height="128" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+              </Component>
+              <Component type="ScriptPanel" id="pnlArp" x="0" y="72" width="1000" height="568"
+                         bgColour="0" itemColour="0" itemColour2="0" borderSize="0" visible="0">
+                <Component type="ScriptButton" id="ArpOn" x="40" y="52" parentComponent="pnlArp"
+                           width="110" height="30" text="ARP ON"/>
+                <Component type="ScriptLabel" id="capArpRate" x="172" y="40" parentComponent="pnlArp"
+                           width="120" height="18" text="RATE" fontName="Oxygen Bold" fontSize="11"
+                           textColour="4286555563" alignment="left" editable="0"/>
+                <Component type="ScriptComboBox" id="ArpRate" x="172" y="60" max="11" parentComponent="pnlArp"
+                           width="120" height="28" items="1/2&#10;1/4&#10;1/4 D&#10;1/8&#10;1/8 D&#10;1/8 T&#10;1/16&#10;1/16 D&#10;1/16 T&#10;1/32&#10;1/32 T"
+                           defaultValue="7"/>
+                <Component type="ScriptLabel" id="capArpMode" x="172" y="96" parentComponent="pnlArp"
+                           width="120" height="18" text="MODE" fontName="Oxygen Bold" fontSize="11"
+                           textColour="4286555563" alignment="left" editable="0"/>
+                <Component type="ScriptComboBox" id="ArpMode" x="172" y="116" max="6" parentComponent="pnlArp"
+                           width="120" height="28" items="Up&#10;Down&#10;Up / Down&#10;Random&#10;As Played&#10;Chord"/>
+                <Component type="ScriptSlider" id="ArpOct" x="470" y="44" middlePosition="0.0"
+                           stepSize="1" min="1" max="4" parentComponent="pnlArp" width="66"
+                           height="80" text="OCTAVES" defaultValue="1.0"/>
+                <Component type="ScriptSlider" id="ArpGate" x="545" y="44" middlePosition="0.0"
+                           min="0.05" parentComponent="pnlArp" width="66" height="80" text="GATE"
+                           defaultValue="0.800000011920929"/>
+                <Component type="ScriptSlider" id="ArpSwing" x="620" y="44" middlePosition="0.0"
+                           max="0.5" parentComponent="pnlArp" width="66" height="80" text="SWING"/>
+                <Component type="ScriptSlider" id="ArpSteps" x="695" y="44" middlePosition="0.0"
+                           stepSize="1" min="1" max="16" parentComponent="pnlArp" width="66"
+                           height="80" text="STEPS" defaultValue="16.0"/>
+                <Component type="ScriptPanel" id="pnlStepView" x="120" y="204" parentComponent="pnlArp"
+                           width="840" height="10" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+                <Component type="ScriptSliderPack" id="ArpVel" x="120" y="220" parentComponent="pnlArp"
+                           width="840" height="120" bgColour="4278454282" itemColour="4278998368"
+                           itemColour2="536929791" textColour="4291819516"/>
+                <Component type="ScriptButton" id="ArpLatch" x="40" y="100" parentComponent="pnlArp"
+                           width="110" height="30" text="LATCH"/>
+                <Component type="ScriptLabel" id="capArpVelMode" x="310" y="40" parentComponent="pnlArp"
+                           width="140" height="18" text="VELOCITY" fontName="Oxygen Bold"
+                           fontSize="11" textColour="4286555563" alignment="left" editable="0"/>
+                <Component type="ScriptComboBox" id="ArpVelMode" x="310" y="60" max="3"
+                           parentComponent="pnlArp" width="140" height="28" items="Played x Step&#10;Step Lane&#10;Played"/>
+                <Component type="ScriptSlider" id="ArpTranspose" x="770" y="44" middlePosition="-1"
+                           stepSize="1" min="-24" max="24" parentComponent="pnlArp" width="66"
+                           height="80" text="TRANSPOSE"/>
+                <Component type="ScriptButton" id="ArpRandom" x="860" y="56" parentComponent="pnlArp"
+                           width="100" height="28" text="RANDOMIZE" saveInPreset="0" isMomentary="1"/>
+                <Component type="ScriptButton" id="ArpReset" x="860" y="96" parentComponent="pnlArp"
+                           width="100" height="28" text="RESET" saveInPreset="0" isMomentary="1"/>
+                <Component type="ScriptLabel" id="capLaneVel" x="40" y="222" parentComponent="pnlArp"
+                           width="76" height="18" text="VELOCITY" fontName="Oxygen Bold"
+                           fontSize="11" textColour="4286555563" alignment="left" editable="0"/>
+                <Component type="ScriptLabel" id="capLanePitch" x="40" y="352" parentComponent="pnlArp"
+                           width="76" height="18" text="PITCH" fontName="Oxygen Bold" fontSize="11"
+                           textColour="4286555563" alignment="left" editable="0"/>
+                <Component type="ScriptLabel" id="capLanePitch2" x="40" y="368" parentComponent="pnlArp"
+                           width="76" height="18" text="+/- 12 st" fontName="Oxygen Bold"
+                           fontSize="11" textColour="4286555563" alignment="left" editable="0"/>
+                <Component type="ScriptSliderPack" id="ArpPitch" x="120" y="350" parentComponent="pnlArp"
+                           width="840" height="100" min="-12" max="12" stepSize="1" bgColour="4278454282"
+                           itemColour="4278998368" itemColour2="536929791" textColour="4291819516"/>
+                <Component type="ScriptLabel" id="capLaneGate" x="40" y="462" parentComponent="pnlArp"
+                           width="76" height="18" text="GATE" fontName="Oxygen Bold" fontSize="11"
+                           textColour="4286555563" alignment="left" editable="0"/>
+                <Component type="ScriptSliderPack" id="ArpGateLane" x="120" y="460" parentComponent="pnlArp"
+                           width="840" height="86" min="0.05" bgColour="4278454282" itemColour="4278998368"
+                           itemColour2="536929791" textColour="4291819516"/>
+              </Component>
+              <Component type="ScriptPanel" id="pnlXYPage" x="0" y="72" width="1000" height="568"
+                         bgColour="0" itemColour="0" itemColour2="0" borderSize="0" visible="0">
+                <Component type="ScriptPanel" id="pnlXY" x="20" y="10" parentComponent="pnlXYPage"
+                           width="548" height="548" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0" allowCallbacks="Clicks, Hover &amp; Dragging"/>
+                <Component type="ScriptButton" id="XYOn" x="608" y="50" parentComponent="pnlXYPage"
+                           width="110" height="30" text="XY ACTIVE" defaultValue="1"/>
+                <Component type="ScriptButton" id="XYReset" x="730" y="50" parentComponent="pnlXYPage"
+                           width="110" height="30" text="CENTRE" saveInPreset="0" isMomentary="1"/>
+                <Component type="ScriptLabel" id="capX" x="608" y="112" parentComponent="pnlXYPage"
+                           width="200" height="18" text="X AXIS  (left  &gt;  right)" fontName="Oxygen Bold"
+                           fontSize="11" textColour="4286555563" alignment="left" editable="0"/>
+                <Component type="ScriptComboBox" id="XTarget" x="608" y="134" max="9" parentComponent="pnlXYPage"
+                           width="200" height="28" items="Filter Cutoff&#10;Resonance&#10;Polyshape Drive&#10;Saturation&#10;Harmonics&#10;Grit&#10;Delay Mix&#10;Reverb Mix&#10;Chorus Depth"/>
+                <Component type="ScriptSlider" id="XDepth" x="840" y="108" middlePosition="0.0"
+                           parentComponent="pnlXYPage" width="66" height="80" text="X DEPTH"
+                           defaultValue="0.6000000238418579"/>
+                <Component type="ScriptLabel" id="capY" x="608" y="212" parentComponent="pnlXYPage"
+                           width="200" height="18" text="Y AXIS  (bottom  &gt;  top)" fontName="Oxygen Bold"
+                           fontSize="11" textColour="4286555563" alignment="left" editable="0"/>
+                <Component type="ScriptComboBox" id="YTarget" x="608" y="234" max="9" parentComponent="pnlXYPage"
+                           width="200" height="28" items="Filter Cutoff&#10;Resonance&#10;Polyshape Drive&#10;Saturation&#10;Harmonics&#10;Grit&#10;Delay Mix&#10;Reverb Mix&#10;Chorus Depth"
+                           defaultValue="3"/>
+                <Component type="ScriptSlider" id="YDepth" x="840" y="208" middlePosition="0.0"
+                           parentComponent="pnlXYPage" width="66" height="80" text="Y DEPTH"
+                           defaultValue="0.6000000238418579"/>
+                <Component type="ScriptSlider" id="XPos" x="608" y="470" middlePosition="0.0"
+                           stepSize="0.001" parentComponent="pnlXYPage" width="66" height="80"
+                           text="X" defaultValue="0.5" visible="0"/>
+                <Component type="ScriptSlider" id="YPos" x="680" y="470" middlePosition="0.0"
+                           stepSize="0.001" parentComponent="pnlXYPage" width="66" height="80"
+                           text="Y" defaultValue="0.300000011920929" visible="0"/>
+                <Component type="ScriptPanel" id="pnlXYInfo" x="608" y="310" parentComponent="pnlXYPage"
+                           width="352" height="230" bgColour="0" itemColour="0" itemColour2="0"
+                           borderSize="0"/>
+              </Component>
+              <Component type="ScriptPanel" id="pnlBrowser" x="0" y="64" width="1000"
+                         height="584" bgColour="0" itemColour="0" itemColour2="0" borderSize="0"
+                         visible="0">
+                <Component type="ScriptFloatingTile" id="ftPresets" x="20" y="20" parentComponent="pnlBrowser"
+                           width="960" height="520" ContentType="PresetBrowser" bgColour="4143972352"
+                           itemColour="4287692721" itemColour2="0" Data="{&#10;  &quot;Title&quot;: &quot; &quot;,&#10;  &quot;ShowSaveButton&quot;: true,&#10;  &quot;ShowExpansionsAsColumn&quot;: false,&#10;  &quot;ShowFolderButton&quot;: true,&#10;  &quot;ShowNotes&quot;: false,&#10;  &quot;ShowEditButtons&quot;: true,&#10;  &quot;EditButtonOffset&quot;: 10,&#10;  &quot;ShowAddButton&quot;: true,&#10;  &quot;ShowRenameButton&quot;: true,&#10;  &quot;ShowDeleteButton&quot;: true,&#10;  &quot;ShowSearchBar&quot;: true,&#10;  &quot;FavoriteIconOffset&quot;: 0,&#10;  &quot;ShowFavoriteIcon&quot;: true,&#10;  &quot;FullPathFavorites&quot;: false,&#10;  &quot;ButtonsInsideBorder&quot;: false,&#10;  &quot;NumColumns&quot;: 3,&#10;  &quot;ColumnWidthRatio&quot;: [&#10;    0.25,&#10;    0.25,&#10;    0.5&#10;  ],&#10;  &quot;ListAreaOffset&quot;: [&#10;    0,&#10;    0,&#10;    0,&#10;    0&#10;  ],&#10;  &quot;ColumnRowPadding&quot;: [&#10;    0,&#10;    0,&#10;    0,&#10;    0&#10;  ],&#10;  &quot;SearchBarBounds&quot;: [],&#10;  &quot;MoreButtonBounds&quot;: [],&#10;  &quot;SaveButtonBounds&quot;: [],&#10;  &quot;FavoriteButtonBounds&quot;: []&#10;}"/>
+                <Component type="ScriptButton" id="btnCloseBrowser" x="880" y="548" parentComponent="pnlBrowser"
+                           width="100" height="28" text="CLOSE" saveInPreset="0" isMomentary="1"/>
+              </Component>
+              <Component type="ScriptLabel" id="lblReadout" x="20" y="652" width="600"
+                         height="22" fontName="Oxygen Bold" textColour="4278248959" alignment="left"
+                         editable="0" text="Y DEPTH   50 %"/>
+              <Component type="ScriptButton" id="btnTabEQ" x="478" y="14" width="86" height="40"
+                         text="EQ" saveInPreset="0"/>
+              <Component type="ScriptPanel" id="pnlEQ" x="0" y="72" width="1000" height="568"
+                         bgColour="0" itemColour="0" itemColour2="0" borderSize="0" visible="0">
+                <Component type="ScriptButton" id="EqOn" x="884" y="17" parentComponent="pnlEQ"
+                           width="70" height="22" text="ON" saveInPreset="0" defaultValue="1"/>
+                <Component type="ScriptFloatingTile" id="ftEQ" x="40" y="44" parentComponent="pnlEQ"
+                           width="920" height="330" ContentType="DraggableFilterPanel" bgColour="0"
+                           itemColour="2164260863" itemColour2="855638016" Data="{&#10;  &quot;ProcessorId&quot;: &quot;EQ&quot;,&#10;  &quot;Index&quot;: -1,&#10;  &quot;FollowWorkspace&quot;: false,&#10;  &quot;AllowFilterResizing&quot;: true,&#10;  &quot;AllowDynamicSpectrumAnalyser&quot;: 0,&#10;  &quot;UseUndoManager&quot;: false,&#10;  &quot;ResetOnDoubleClick&quot;: false,&#10;  &quot;ShowLines&quot;: true,&#10;  &quot;PathMargin&quot;: 3.0,&#10;  &quot;PathType&quot;: &quot;StrokeFullWidth&quot;,&#10;  &quot;GainRange&quot;: 24.0,&#10;  &quot;AllowContextMenu&quot;: true&#10;}"
+                           itemColour3="4278251007"/>
+                <Component type="ScriptLabel" id="capEqBands" x="40" y="446" parentComponent="pnlEQ"
+                           width="200" height="18" text="BAND" fontName="Oxygen Bold" fontSize="11"
+                           textColour="4286555563" alignment="left" editable="0"/>
+                <Component type="ScriptButton" id="EqBand1" x="40" y="468" parentComponent="pnlEQ"
+                           width="37" height="30" text="1" saveInPreset="0" defaultValue="1"/>
+                <Component type="ScriptButton" id="EqBand2" x="81" y="468" parentComponent="pnlEQ"
+                           width="37" height="30" text="2" saveInPreset="0"/>
+                <Component type="ScriptButton" id="EqBand3" x="122" y="468" parentComponent="pnlEQ"
+                           width="37" height="30" text="3" saveInPreset="0"/>
+                <Component type="ScriptButton" id="EqBand4" x="163" y="468" parentComponent="pnlEQ"
+                           width="37" height="30" text="4" saveInPreset="0"/>
+                <Component type="ScriptButton" id="EqBand5" x="204" y="468" parentComponent="pnlEQ"
+                           width="37" height="30" text="5" saveInPreset="0"/>
+                <Component type="ScriptButton" id="EqBand6" x="245" y="468" parentComponent="pnlEQ"
+                           width="37" height="30" text="6" saveInPreset="0" visible="0"/>
+                <Component type="ScriptButton" id="EqBand7" x="286" y="468" parentComponent="pnlEQ"
+                           width="37" height="30" text="7" saveInPreset="0" visible="0"/>
+                <Component type="ScriptButton" id="EqBand8" x="327" y="468" parentComponent="pnlEQ"
+                           width="37" height="30" text="8" saveInPreset="0" visible="0"/>
+                <Component type="ScriptSlider" id="EqGain" x="392" y="446" middlePosition="-1"
+                           stepSize="0.1" min="-18" max="18" parentComponent="pnlEQ" width="78"
+                           height="98" text="GAIN" saveInPreset="0"/>
+                <Component type="ScriptSlider" id="EqFreq" x="474" y="446" middlePosition="1000"
+                           stepSize="1" min="20" max="20000" parentComponent="pnlEQ" width="78"
+                           height="98" text="FREQ" defaultValue="1000.0" saveInPreset="0"/>
+                <Component type="ScriptSlider" id="EqQ" x="556" y="446" middlePosition="1.0"
+                           min="0.3" max="8" parentComponent="pnlEQ" width="78" height="98"
+                           text="Q" defaultValue="1.0" saveInPreset="0"/>
+                <Component type="ScriptLabel" id="capEqType" x="650" y="446" parentComponent="pnlEQ"
+                           width="140" height="18" text="TYPE" fontName="Oxygen Bold" fontSize="11"
+                           textColour="4286555563" alignment="left" editable="0"/>
+                <Component type="ScriptComboBox" id="EqType" x="650" y="468" max="5" parentComponent="pnlEQ"
+                           width="140" height="28" items="Low Pass&#10;High Pass&#10;Low Shelf&#10;High Shelf&#10;Peak"
+                           defaultValue="5" saveInPreset="0"/>
+                <Component type="ScriptButton" id="EqBandOn" x="802" y="468" parentComponent="pnlEQ"
+                           width="80" height="30" text="BAND ON" saveInPreset="0" defaultValue="1"/>
+                <Component type="ScriptButton" id="EqReset" x="890" y="468" parentComponent="pnlEQ"
+                           width="80" height="30" text="RESET" saveInPreset="0" isMomentary="1"/>
+              </Component>
+            </ContentProperties>
+          </UIData>
+        </Processor>
+      </ChildProcessors>
+    </Processor>
+    <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+      <ChildProcessors/>
+    </Processor>
+    <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="1" Intensity="0.0">
+      <ChildProcessors/>
+    </Processor>
+    <Processor Type="EffectChain" ID="FX" Bypassed="0">
+      <ChildProcessors>
+        <Processor Type="CurveEq" ID="EQ" Bypassed="0" NumFilters="5" Band0="6.0"
+                   Band1="235.0" Band2="1.399999976158142" Band3="1.0" Band4="4.0"
+                   Band5="-2.5" Band6="99.0" Band7="4.46999979019165" Band8="1.0"
+                   Band9="2.0" Band10="0.0" Band11="250.0" Band12="1.0" Band13="1.0"
+                   Band14="4.0" Band15="0.0" Band16="1200.0" Band17="1.0" Band18="1.0"
+                   Band19="4.0" Band20="0.0" Band21="6000.0" Band22="0.699999988079071"
+                   Band23="1.0" Band24="3.0" FFTEnabled="1">
+          <ChildProcessors/>
+          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+        </Processor>
+        <Processor Type="Dynamics" ID="Compressor" Bypassed="0" GateEnabled="0.0"
+                   GateThreshold="0.0" GateAttack="1.0" GateRelease="100.0" CompressorEnabled="1.0"
+                   CompressorThreshold="-14.0" CompressorRatio="4.0" CompressorAttack="5.0"
+                   CompressorRelease="120.0" LimiterEnabled="0.0" LimiterThreshold="0.0"
+                   LimiterAttack="1.0" LimiterRelease="10.0" CompressorMakeup="0.0"
+                   LimiterMakeup="0.0">
+          <ChildProcessors/>
+          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+        </Processor>
+        <Processor Type="Chorus" ID="Chorus" Bypassed="1" Rate="0.300000011920929"
+                   Width="0.4000000059604645" Feedback="0.300000011920929" Delay="1.0">
+          <ChildProcessors/>
+          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+        </Processor>
+        <Processor Type="Delay" ID="Delay" Bypassed="1" DelayTimeLeft="375.0" DelayTimeRight="375.0"
+                   FeedbackLeft="0.300000011920929" FeedbackRight="0.300000011920929"
+                   LowPassFreq="6000.0" HiPassFreq="80.0" Mix="0.2000000029802322"
+                   TempoSync="0.0">
+          <ChildProcessors/>
+          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+        </Processor>
+        <Processor Type="SimpleReverb" ID="Reverb" Bypassed="1" RoomSize="0.5" Damping="0.6000000238418579"
+                   WetLevel="0.1500000059604645" DryLevel="0.8500000238418579" Width="0.800000011920929"
+                   FreezeMode="0.1000000014901161">
+          <ChildProcessors/>
+          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+        </Processor>
+        <Processor Type="Dynamics" ID="Limiter" Bypassed="0" GateEnabled="0.0" GateThreshold="0.0"
+                   GateAttack="1.0" GateRelease="100.0" CompressorEnabled="0.0"
+                   CompressorThreshold="0.0" CompressorRatio="1.0" CompressorAttack="10.0"
+                   CompressorRelease="100.0" LimiterEnabled="1.0" LimiterThreshold="-0.5"
+                   LimiterAttack="1.0" LimiterRelease="60.0" CompressorMakeup="0.0"
+                   LimiterMakeup="0.0">
+          <ChildProcessors/>
+          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+        </Processor>
+        <Processor Type="SimpleGain" ID="Output" Bypassed="0" Gain="-3.999999761581421"
+                   Delay="0.0" Width="90.0" Balance="0.0" InvertPolarity="0.0">
+          <ChildProcessors>
+            <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
+              <ChildProcessors/>
+            </Processor>
+            <Processor Type="ModulatorChain" ID="Delay Modulation" Bypassed="0" Intensity="1.0">
+              <ChildProcessors/>
+            </Processor>
+            <Processor Type="ModulatorChain" ID="Width Modulation" Bypassed="0" Intensity="1.0">
+              <ChildProcessors/>
+            </Processor>
+            <Processor Type="ModulatorChain" ID="Pan Modulation" Bypassed="0" Intensity="1.0">
+              <ChildProcessors/>
+            </Processor>
+          </ChildProcessors>
+          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+        </Processor>
+        <Processor Type="CurveEq" ID="Parametriq EQ" Bypassed="0" NumFilters="1"
+                   Band0="16.22068977355957" Band1="36.96241760253906" Band2="1.0"
+                   Band3="1.0" Band4="4.0" FFTEnabled="1">
+          <ChildProcessors/>
+          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+        </Processor>
+      </ChildProcessors>
+    </Processor>
+    <Processor Type="SineSynth" ID="SubOsc" Bypassed="0" Gain="0.8999999761581421"
+               Balance="0.0" VoiceLimit="2.0" KillFadeTime="20.0" IconColour="0"
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="0.0" CoarseFreqRatio="1.0"
+               FineFreqRatio="0.0" SaturationAmount="0.300000011920929">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="SubEnv" Bypassed="0" Monophonic="0.0" Retrigger="1.0"
+                       Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0" Attack="1.0"
+                       AttackLevel="0.0" Hold="10.0" Decay="1800.0" Sustain="-100.0"
+                       Release="2992.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="Velocity" ID="SubVel" Bypassed="0" Intensity="0.2000000029802322"
+                       UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
+              <ChildProcessors/>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="SubPitch" Bypassed="0" Monophonic="0.0" Retrigger="1.0"
+                       Bipolar="1" Intensity="0.4166666567325592" AttackCurve="0.0"
+                       DecayCurve="0.0" Attack="0.0" AttackLevel="0.0" Hold="0.0" Decay="60.0"
+                       Sustain="-100.0" Release="20.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors>
+            <Processor Type="PolyshapeFX" ID="SubShape" Bypassed="0" Curve="" AsymetricalCurve=""
+                       Drive="14.75912475585938" Mode="3.0" Oversampling="0.0" Bias="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Drive Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="PolyphonicFilter" ID="SubFilter" Bypassed="0" Gain="0.0"
+                       Frequency="20000.0" Q="0.800000011920929" Mode="8.0" Quality="512.0"
+                       BipolarIntensity="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+              <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+            </Processor>
+            <Processor Type="Saturator" ID="SubSat" Bypassed="0" Saturation="0.4000000059604645"
+                       WetAmount="0.6000000238418579" PreGain="0.0" PostGain="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Saturation Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+              <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="SineSynth" ID="Harm2" Bypassed="0" Gain="0.25" Balance="0.0"
+               VoiceLimit="2.0" KillFadeTime="20.0" IconColour="0" OctaveTranspose="0.0"
+               SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="2.0" FineFreqRatio="0.0"
+               SaturationAmount="0.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="H2Env" Bypassed="0" Monophonic="0.0" Retrigger="1.0"
+                       Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0" Attack="1.0"
+                       AttackLevel="0.0" Hold="10.0" Decay="1800.0" Sustain="-100.0"
+                       Release="2992.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="Velocity" ID="H2Vel" Bypassed="0" Intensity="0.2000000029802322"
+                       UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
+              <ChildProcessors/>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="H2Pitch" Bypassed="0" Monophonic="0.0" Retrigger="1.0"
+                       Bipolar="1" Intensity="0.4166666567325592" AttackCurve="0.0"
+                       DecayCurve="0.0" Attack="0.0" AttackLevel="0.0" Hold="0.0" Decay="60.0"
+                       Sustain="-100.0" Release="20.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors>
+            <Processor Type="PolyphonicFilter" ID="H2Filter" Bypassed="0" Gain="0.0"
+                       Frequency="20000.0" Q="0.800000011920929" Mode="8.0" Quality="512.0"
+                       BipolarIntensity="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+              <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="SineSynth" ID="Harm3" Bypassed="0" Gain="0.1000000014901161"
+               Balance="0.0" VoiceLimit="2.0" KillFadeTime="20.0" IconColour="0"
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="3.0"
+               FineFreqRatio="0.0" SaturationAmount="0.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="H3Env" Bypassed="0" Monophonic="0.0" Retrigger="1.0"
+                       Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0" Attack="1.0"
+                       AttackLevel="0.0" Hold="10.0" Decay="1800.0" Sustain="-100.0"
+                       Release="2992.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="Velocity" ID="H3Vel" Bypassed="0" Intensity="0.2000000029802322"
+                       UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
+              <ChildProcessors/>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="H3Pitch" Bypassed="0" Monophonic="0.0" Retrigger="1.0"
+                       Bipolar="1" Intensity="0.4166666567325592" AttackCurve="0.0"
+                       DecayCurve="0.0" Attack="0.0" AttackLevel="0.0" Hold="0.0" Decay="60.0"
+                       Sustain="-100.0" Release="20.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors>
+            <Processor Type="PolyphonicFilter" ID="H3Filter" Bypassed="0" Gain="0.0"
+                       Frequency="20000.0" Q="0.800000011920929" Mode="8.0" Quality="512.0"
+                       BipolarIntensity="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+              <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="WaveSynth" ID="Grit" Bypassed="0" Gain="0.03999999910593033"
+               Balance="0.0" VoiceLimit="2.0" KillFadeTime="20.0" IconColour="0"
+               OctaveTranspose1="0.0" SemiTones1="0.0" OctaveTranspose2="0.0"
+               SemiTones2="0.0" Detune1="0.0" Detune2="0.0" WaveForm1="3.0"
+               WaveForm2="3.0" Pan1="0.0" Pan2="0.0" Mix="0.0" EnableSecondOscillator="0.0"
+               PulseWidth1="0.5" PulseWidth2="0.5" HardSync="0.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="GritEnv" Bypassed="0" Monophonic="0.0" Retrigger="1.0"
+                       Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0" Attack="1.0"
+                       AttackLevel="0.0" Hold="10.0" Decay="1800.0" Sustain="-100.0"
+                       Release="2992.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="Velocity" ID="GritVel" Bypassed="0" Intensity="0.2000000029802322"
+                       UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
+              <ChildProcessors/>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="GritPitch" Bypassed="0" Monophonic="0.0" Retrigger="1.0"
+                       Bipolar="1" Intensity="0.4166666567325592" AttackCurve="0.0"
+                       DecayCurve="0.0" Attack="0.0" AttackLevel="0.0" Hold="0.0" Decay="60.0"
+                       Sustain="-100.0" Release="20.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors>
+            <Processor Type="PolyshapeFX" ID="GritShape" Bypassed="0" Curve="" AsymetricalCurve=""
+                       Drive="14.75912475585938" Mode="3.0" Oversampling="0.0" Bias="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Drive Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="PolyphonicFilter" ID="GritFilter" Bypassed="0" Gain="0.0"
+                       Frequency="20000.0" Q="0.800000011920929" Mode="8.0" Quality="512.0"
+                       BipolarIntensity="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+              <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+            </Processor>
+            <Processor Type="Saturator" ID="GritSat" Bypassed="0" Saturation="0.4000000059604645"
+                       WetAmount="0.6000000238418579" PreGain="0.0" PostGain="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Saturation Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+              <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Mix Modulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Osc2 Pitch Modulation" Bypassed="0"
+                   Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="SineSynth" ID="DeepOsc" Bypassed="0" Gain="0.1000000014901161"
+               Balance="0.0" VoiceLimit="2.0" KillFadeTime="20.0" IconColour="0"
+               OctaveTranspose="-1.0" SemiTones="0.0" UseFreqRatio="0.0" CoarseFreqRatio="1.0"
+               FineFreqRatio="0.0" SaturationAmount="0.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="DeepEnv" Bypassed="0" Monophonic="0.0" Retrigger="1.0"
+                       Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0" Attack="1.0"
+                       AttackLevel="0.0" Hold="10.0" Decay="1800.0" Sustain="-100.0"
+                       Release="2992.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="Velocity" ID="DeepVel" Bypassed="0" Intensity="0.2000000029802322"
+                       UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
+              <ChildProcessors/>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="DeepPitch" Bypassed="0" Monophonic="0.0" Retrigger="1.0"
+                       Bipolar="1" Intensity="0.4166666567325592" AttackCurve="0.0"
+                       DecayCurve="0.0" Attack="0.0" AttackLevel="0.0" Hold="0.0" Decay="60.0"
+                       Sustain="-100.0" Release="20.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+  </ChildProcessors>
+  <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+  <macro_controls>
+    <macro name="Macro 1" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 2" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 3" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 4" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 5" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 6" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 7" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 8" value="0.0" midi_cc="-1"/>
+  </macro_controls>
+  <MidiAutomation/>
+  <MPEData Enabled="0"/>
+</Processor>

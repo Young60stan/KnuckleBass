@@ -1,0 +1,6 @@
+# HISE build output (recreated on every build)
+Binaries/
+DspNetworks/Binaries/
+*.pdb
+*.obj
+*.lib

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Preset Version="1.0.0">
+  <Content Processor="Interface">
+    <Control type="ScriptSlider" id="ArpOct" value="1"/>
+    <Control type="ScriptSlider" id="ArpGate" value="0.8"/>
+    <Control type="ScriptSlider" id="ArpSwing" value="0"/>
+    <Control type="ScriptSlider" id="ArpSteps" value="16"/>
+    <Control type="ScriptSlider" id="ArpTranspose" value="0"/>
+    <Control type="ScriptSlider" id="XDepth" value="0.8"/>
+    <Control type="ScriptSlider" id="YDepth" value="1"/>
+    <Control type="ScriptSlider" id="XPos" value="0.1"/>
+    <Control type="ScriptSlider" id="YPos" value="0.1"/>
+    <Control type="ScriptSlider" id="SubLevel" value="0.85"/>
+    <Control type="ScriptSlider" id="SubOct" value="0"/>
+    <Control type="ScriptSlider" id="SubDrive" value="0.15"/>
+    <Control type="ScriptSlider" id="Harm2" value="0.4"/>
+    <Control type="ScriptSlider" id="Harm3" value="0.12"/>
+    <Control type="ScriptSlider" id="GritLevel" value="0.2"/>
+    <Control type="ScriptSlider" id="GritOct" value="0"/>
+    <Control type="ScriptSlider" id="PunchAmt" value="0"/>
+    <Control type="ScriptSlider" id="PunchTime" value="60"/>
+    <Control type="ScriptSlider" id="DeepLevel" value="0"/>
+    <Control type="ScriptSlider" id="Attack" value="3"/>
+    <Control type="ScriptSlider" id="Decay" value="450"/>
+    <Control type="ScriptSlider" id="Sustain" value="85"/>
+    <Control type="ScriptSlider" id="Release" value="180"/>
+    <Control type="ScriptSlider" id="Volume" value="-3"/>
+    <Control type="ScriptSlider" id="VelSens" value="0.3"/>
+    <Control type="ScriptSlider" id="Cutoff" value="2500"/>
+    <Control type="ScriptSlider" id="Resonance" value="1"/>
+    <Control type="ScriptSlider" id="ShapeDrive" value="3"/>
+    <Control type="ScriptSlider" id="SatAmount" value="0.3"/>
+    <Control type="ScriptSlider" id="SatMix" value="0.5"/>
+    <Control type="ScriptSlider" id="CompThresh" value="-12"/>
+    <Control type="ScriptSlider" id="CompRatio" value="4"/>
+    <Control type="ScriptSlider" id="CompAttack" value="10"/>
+    <Control type="ScriptSlider" id="CompRelease" value="120"/>
+    <Control type="ScriptSlider" id="LimCeiling" value="-1"/>
+    <Control type="ScriptSlider" id="LimRelease" value="60"/>
+    <Control type="ScriptSlider" id="ChorusRate" value="0.3"/>
+    <Control type="ScriptSlider" id="ChorusDepth" value="0.4"/>
+    <Control type="ScriptSlider" id="DelayTime" value="375"/>
+    <Control type="ScriptSlider" id="DelayFeedback" value="0.3"/>
+    <Control type="ScriptSlider" id="DelayMix" value="0.2"/>
+    <Control type="ScriptSlider" id="ReverbSize" value="0.5"/>
+    <Control type="ScriptSlider" id="ReverbMix" value="0.15"/>
+    <Control type="ScriptSlider" id="Width" value="100"/>
+    <Control type="ScriptButton" id="MonoBtn" value="1"/>
+    <Control type="ScriptButton" id="FilterOn" value="1"/>
+    <Control type="ScriptButton" id="ShapeOn" value="1"/>
+    <Control type="ScriptButton" id="SatOn" value="1"/>
+    <Control type="ScriptButton" id="CompOn" value="1"/>
+    <Control type="ScriptButton" id="LimOn" value="1"/>
+    <Control type="ScriptButton" id="ChorusOn" value="0"/>
+    <Control type="ScriptButton" id="DelayOn" value="0"/>
+    <Control type="ScriptButton" id="ReverbOn" value="0"/>
+    <Control type="ScriptButton" id="ArpOn" value="0"/>
+    <Control type="ScriptButton" id="ArpLatch" value="0"/>
+    <Control type="ScriptButton" id="XYOn" value="1"/>
+    <Control type="ScriptComboBox" id="GritWave" value="1"/>
+    <Control type="ScriptComboBox" id="FilterMode" value="1"/>
+    <Control type="ScriptComboBox" id="ShapeMode" value="2"/>
+    <Control type="ScriptComboBox" id="ArpRate" value="7"/>
+    <Control type="ScriptComboBox" id="ArpMode" value="1"/>
+    <Control type="ScriptComboBox" id="ArpVelMode" value="1"/>
+    <Control type="ScriptComboBox" id="XTarget" value="4"/>
+    <Control type="ScriptComboBox" id="YTarget" value="3"/>
+  </Content>
+</Preset>
